@@ -48,3 +48,13 @@ siguiente Sur = Oeste --if South then West
 siguiente Oeste = error "Oeste no tiene direccion siguiente" --else, returns "error" beacuse in this case West has no "next direction". (it weird but the exercise was written that way)
 
 
+--6
+data DiaDeSemana = Lunes | Martes | Miercoles | Jueves | Viernes | Sabado | Domingo
+	deriving Show
+
+--Dia de la semana means "day of the week".
+--Lunes means "Monday", Martes means "Tuesday", Miercoles means "Wednesday", Jueves means "Thursday", Viernes means "Friday", Sabado means "Saturday" and Domingo means "Sunday".
+
+primeroYUltimoDia :: (DiaDeSemana, DiaDeSemana) --primero y ultimo dia means "first and last day"
+primeroYUltimoDia = (Lunes, Domingo) --(Monday, Sunday)
+
