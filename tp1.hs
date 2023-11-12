@@ -20,4 +20,31 @@ maxDelPar (x,y) = if x > y
                     then x 
                     else y
 
---5
+--5 (creating a "data" in order to make functions with directions. (North, South, East and West))
+data Dir = Norte | Sur | Este | Oeste
+	deriving Show
+
+--opuesto means "oposite"
+opuesto :: Dir -> Dir 
+opuesto Norte = Sur --if North then South
+opuesto Sur = Norte --if South then North
+opuesto Este = Oeste --if East then West
+opuesto Oeste = Este --if West then East
+
+--iguales means "the same"
+iguales :: Dir -> Dir -> Bool
+iguales Norte Norte = True --if North and North then True, they are the same
+iguales Sur Sur = True --South and South is True
+iguales Este Este = True --East and East is True
+iguales Oeste Oeste = True --West and West is True
+iguales _ _ = False --otherwise, returns False
+
+
+--siguiente means "next" 
+siguiente :: Dir -> Dir
+siguiente Norte = Este --if North then East beacuse the next direction of North is East 
+siguiente Este = Sur --if East then South
+siguiente Sur = Oeste --if South then West
+siguiente Oeste = error "Oeste no tiene direccion siguiente" --else, returns "error" beacuse in this case West has no "next direction". (it weird but the exercise was written that way)
+
+
