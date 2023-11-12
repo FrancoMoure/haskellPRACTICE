@@ -58,3 +58,8 @@ data DiaDeSemana = Lunes | Martes | Miercoles | Jueves | Viernes | Sabado | Domi
 primeroYUltimoDia :: (DiaDeSemana, DiaDeSemana) --primero y ultimo dia means "first and last day"
 primeroYUltimoDia = (Lunes, Domingo) --(Monday, Sunday)
 
+empiezaConM ::  DiaDeSemana -> Bool --empieza con M means "starts with M"
+empiezaConM Martes = True 
+empiezaConM Miercoles = True
+empiezaConM _ = False 
+
