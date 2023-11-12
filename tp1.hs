@@ -63,3 +63,28 @@ empiezaConM Martes = True
 empiezaConM Miercoles = True
 empiezaConM _ = False 
 
+
+
+--This requires a sub-task
+
+vieneDespues :: DiaDeSemana -> DiaDeSemana -> Bool --viene despues means "comes next"
+vieneDespues d1 d2 = numeroSegunDia d1 > numeroSegunDia d2
+
+numeroSegunDia :: DiaDeSemana -> Int --numero de dia means "day number"
+numeroSegunDia Lunes = 1
+numeroSegunDia Martes = 2
+numeroSegunDia Miercoles = 3
+numeroSegunDia Jueves = 4
+numeroSegunDia Viernes = 5
+numeroSegunDia Sabado = 6
+numeroSegunDia Domingo = 7
+
+
+--this function right here recieves a day and returns a boolean based on knowing if the day is on one of the two extrems of the week or in the middle.
+estaEnElMedio ::  DiaDeSemana -> Bool --esta en el medio means "is in the middle"
+estaEnElMedio Lunes = False
+estaEnElMedio Domingo = False
+estaEnElMedio _ = True
+--this is a good use of pattern matching and knowing how to write less code.
+
+
