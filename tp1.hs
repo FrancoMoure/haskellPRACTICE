@@ -88,3 +88,20 @@ estaEnElMedio _ = True
 --this is a good use of pattern matching and knowing how to write less code.
 
 
+--7
+negar :: Bool -> Bool --negar means "negation"
+negar True = False
+negar False = True
+
+implica :: Bool -> Bool -> Bool
+implica True b = b
+implica False _ = True
+
+yTambien :: Bool -> Bool -> Bool -- &&
+yTambien True True = True
+yTambien _ _ = False
+
+
+oBien :: Bool -> Bool -> Bool -- ||
+oBien True _ = True
+oBien _ y = y 	
