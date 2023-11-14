@@ -93,7 +93,7 @@ negar :: Bool -> Bool --negar means "negation"
 negar True = False
 negar False = True
 
-implica :: Bool -> Bool -> Bool
+implica :: Bool -> Bool -> Bool --implica means "it implies"
 implica True b = b
 implica False _ = True
 
