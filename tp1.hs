@@ -105,3 +105,8 @@ yTambien _ _ = False
 oBien :: Bool -> Bool -> Bool -- ||
 oBien True _ = True
 oBien _ y = y 	
+
+--7
+data Persona  =  P  String 	Int     --persona means "person"
+	           -- Nombre 	Edad     --nombre means "name", edad means "age"
+	deriving Show
