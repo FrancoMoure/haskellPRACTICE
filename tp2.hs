@@ -44,3 +44,11 @@ apariciones _ [] = 0
 apariciones e (x:xs) = if e == x 
                         then 1 + apariciones e xs 
                         else 0 + apariciones e xs
+
+--9
+losMenoresA :: Int -> [Int] -> [Int]
+losMenoresA _ [] = []
+losMenoresA e (n:ns) = if n < e then n : losMenoresA e ns
+                                else losMenoresA e ns
+
+
