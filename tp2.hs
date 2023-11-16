@@ -69,3 +69,12 @@ agregarAlFinal (x:xs) e = x : agregarAlFinal xs e
 agregar :: [a] -> [a] -> [a]
 agregar [] ys = ys
 agregar (x:xs) ys = x : agregar xs ys
+
+
+--13
+reversa :: [a] -> [a]
+reversa xs = reversaAux xs []
+
+reversaAux :: [a] -> [a] -> [a]
+reversaAux [] acc = acc
+reversaAux (x:xs) acc = reversaAux xs (x:acc)
