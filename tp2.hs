@@ -21,3 +21,14 @@ sucesores (n:ns) = n + 1 : sucesores ns
 conjuncion :: [Bool] -> Bool
 conjuncion [] = True
 conjuncion (b:bs) = b && conjuncion bs
+
+--5
+disyuncion :: [Bool] -> Bool
+disyuncion [] = False
+disyuncion (b:bs) = b || disyuncion bs
+
+--6 
+aplanar :: [[a]] -> [a]
+aplanar [] = []
+aplanar (x:xss) = x ++ aplanar xss
+
