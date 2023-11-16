@@ -32,3 +32,7 @@ aplanar :: [[a]] -> [a]
 aplanar [] = []
 aplanar (x:xss) = x ++ aplanar xss
 
+--7
+pertenece :: Eq a => a -> [a] -> Bool
+pertenece _ [] = False
+pertenece e (x:xs) = e == x || pertenece e xs
