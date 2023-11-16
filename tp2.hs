@@ -16,3 +16,8 @@ longitud (x:xs) = 1 + longitud xs
 sucesores :: [Int] -> [Int]
 sucesores [] = []
 sucesores (n:ns) = n + 1 : sucesores ns 
+
+--4 
+conjuncion :: [Bool] -> Bool
+conjuncion [] = True
+conjuncion (b:bs) = b && conjuncion bs
