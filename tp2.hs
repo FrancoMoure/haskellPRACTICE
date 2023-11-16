@@ -36,3 +36,11 @@ aplanar (x:xss) = x ++ aplanar xss
 pertenece :: Eq a => a -> [a] -> Bool
 pertenece _ [] = False
 pertenece e (x:xs) = e == x || pertenece e xs
+
+--8 
+apariciones :: Eq a => a -> [a] -> Int
+--el dato debe ser Int
+apariciones _ [] = 0
+apariciones e (x:xs) = if e == x 
+                        then 1 + apariciones e xs 
+                        else 0 + apariciones e xs
