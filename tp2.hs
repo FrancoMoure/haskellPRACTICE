@@ -58,5 +58,10 @@ lasDeLongitudMayorA e (x:xss) = if longitud x > e
                                     then x : lasDeLongitudMayorA e xss
                                     else lasDeLongitudMayorA e xss
 
+--11 
+agregarAlFinal :: [a] -> a -> [a]
+agregarAlFinal [] e = [e]
+agregarAlFinal (x:xs) e = x : agregarAlFinal xs e
+
 
                                     
