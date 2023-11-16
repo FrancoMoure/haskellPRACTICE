@@ -85,3 +85,10 @@ zipMaximos :: [Int] -> [Int] -> [Int]
 zipMaximos [] ys = ys
 zipMaximos xs [] = xs
 zipMaximos (x:xs) (y:ys) = max x y : zipMaximos xs ys
+
+--15
+elMinimo :: Ord a => [a] -> a 
+--precond: la lista no debe estar vacia.
+elMinimo [] = error "lista vacia"
+elMinimo [x] = x 
+elMinimo (x:xs) = min x (elMinimo xs)
