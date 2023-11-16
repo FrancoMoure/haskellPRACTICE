@@ -78,3 +78,10 @@ reversa xs = reversaAux xs []
 reversaAux :: [a] -> [a] -> [a]
 reversaAux [] acc = acc
 reversaAux (x:xs) acc = reversaAux xs (x:acc)
+
+
+--14
+zipMaximos :: [Int] -> [Int] -> [Int]
+zipMaximos [] ys = ys
+zipMaximos xs [] = xs
+zipMaximos (x:xs) (y:ys) = max x y : zipMaximos xs ys
